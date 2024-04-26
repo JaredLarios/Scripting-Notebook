@@ -1,6 +1,7 @@
 import subprocess
 
 sites = ['Reforma', 'Portales']
+subprocess.call('powershell', shell=True)
 
 
 def verify_wdinows():
@@ -10,7 +11,6 @@ def verify_wdinows():
         subprocess.call(cmd, shell=True)
 
 def rename_windows():
-    subprocess.call('powershell', shell=True)
     cmd = "powershell Invoke-Expression -Command 'hostname'"
     output = subprocess.check_output(cmd, shell=True)
     print('[+] Desktop Old Name: \t', output.decode('utf-8'))
