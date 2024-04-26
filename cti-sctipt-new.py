@@ -26,3 +26,6 @@ def rename_windows():
 
     except:
         print('[x] Error: \tComputer not Renamed')
+
+verify_wdinows()
+rename_windows()
