@@ -18,7 +18,6 @@ def rename_windows():
     work_station_number = input('Enter the Work Station Name: ')
     try:
         site_opt = int( site_opt ) - 1
-        work_station_number = int( work_station_number )
         name = f'{sites[site_opt]}-{work_station_number}'
         cmd = f'Rename-Computer -NewName "{name}" -Restart'
 
