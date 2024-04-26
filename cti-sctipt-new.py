@@ -14,12 +14,13 @@ def rename_windows():
     print('[+] Desktop Old Name: \t', output.decode('utf-8'))
 
     print('--- \t Renaming Computer \t---')
+    user = input('Enter Local Username: \t')
     site_opt = input('Enter the Site Number: \n\t1) Reforma \n\t2) Portales \n\t3) Exit \n--> ')
     work_station_number = input('Enter the Work Station Name: ')
     try:
         site_opt = int( site_opt ) - 1
         name = f'{sites[site_opt]}-{work_station_number}'
-        cmd = f'Rename-Computer -NewName "{name}" -Restart'
+        cmd = f'Rename-Computer -NewName "{name}" -LocalCredential {user} -Restart'
 
     except:
         print('[x] Error: \tComputer not Renamed')
