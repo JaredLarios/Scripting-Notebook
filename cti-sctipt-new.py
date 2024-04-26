@@ -1,8 +1,6 @@
 import subprocess
 
 sites = ['Reforma', 'Portales']
-subprocess.call('powershell', shell=True)
-
 
 def verify_wdinows():
     cmds = ['slmgr /dli', 'slmgr /upk','slmgr /cpky']
