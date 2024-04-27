@@ -8,8 +8,11 @@ def powershell_script(cmd: str):
     p.communicate()
 
 root = os.path.join('.', 'scripts')
+windows_keys = os.path.join(root, 'PKChecker.ps1')
 pk_reset_path = os.path.join(root, 'WindowsResetPK.ps1')
 rename_c_path = os.path.join(root, 'RenameC.ps1')
+
+powershell_script(windows_keys)
 
 opt = input('Do you want to reset PK? (y/n) \t')
 pk = input('Enter Prod Key if you have one? (Hit enter if not) \t')
