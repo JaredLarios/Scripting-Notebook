@@ -1,8 +1,8 @@
 Param(
     [string]$Site = 'Reforma',
     [Parameter(Mandatory, HelpMessage = "Please provide a valid Name")]
-    [string]$Name
+    [string]$WorkStation
 )
 
-$NewComputerName = $Site + '-' + $Name
+$NewComputerName = $Site + '-' + $WorkStation
 Rename-Computer -NewName "$NewComputerName" -Restart

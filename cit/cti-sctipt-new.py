@@ -23,5 +23,5 @@ site = input('Enter site name: (Default Site: Reforma) \t')
 w_station = input('Enter workstation name: (Example: C1) \t')
 
 if opt == 'yes' or opt == 'y':
-    cmd = f'-Site {site}' if site != '' else f'-Name {w_station}'
+    cmd = f'-Site {site} -WorkStation {w_station}' if site != '' else f'-WorkStation {w_station}'
     powershell_script(cmd)
